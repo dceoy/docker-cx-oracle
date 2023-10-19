@@ -1,0 +1,14 @@
+---
+version: '3'
+services:
+  cx-oracle:
+    container_name: cx-oracle
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: dceoy/cx-oracle:latest
+    entrypoint:
+      - /bin/bash
+      - -c
+    command:
+      - /usr/bin/python
